@@ -1,13 +1,8 @@
 def fibonacci(index_position)
-	sum_array = []
-	(0..index_position).each do |num|
-		sum_array << num
-	end
-	sum_array.pop
-	return sum_array.sum + sum_array[index_position - 2]
+  return  n  if n <= 1
+  fibonacci( n - 1 ) + fibonacci( n - 2 )
 end
 
+n = gets.to_i
 
-index_position = gets.to_i
-
-fibonacci(index_position)
+fibonacci(n)
